@@ -51,6 +51,7 @@ class SongsController < ApplicationController
       Song.create(title: song[0],
        artist: Artist.find_by_or_create(name: song[1]) )
     end
+    redirect_to songs_path
   end
 
   private
